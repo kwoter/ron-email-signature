@@ -94,4 +94,8 @@ open(f"{BASE_DIR}/signature.html","w").write(prod)
 
 preview_doc = f'''<!doctype html><html><head><meta charset="utf-8"><style>body{{margin:0;background:#fff;padding:40px;}}</style></head><body>{prev}</body></html>'''
 open(f"{BASE_DIR}/preview.html","w").write(preview_doc)
-print("built signature.html (CDN) + preview.html (local)")
+
+# index.html = clean copy-paste page (CDN urls) for Ron to open in a browser
+index_doc = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ron Atkinson — Email Signature</title><style>body{{margin:0;background:#ffffff;padding:48px 32px;font-family:{FONT};-webkit-font-smoothing:antialiased;}}</style></head><body>{prod}</body></html>'''
+open(f"{BASE_DIR}/index.html","w").write(index_doc)
+print("built signature.html + index.html (CDN) + preview.html (local)")
