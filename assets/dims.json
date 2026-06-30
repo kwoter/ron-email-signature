@@ -1,0 +1,26 @@
+{
+  "addon-exchange": {
+    "w": 264,
+    "h": 27
+  },
+  "claims-exchange": {
+    "w": 260,
+    "h": 27
+  },
+  "kwoter": {
+    "w": 84,
+    "h": 22
+  },
+  "kompare": {
+    "w": 98,
+    "h": 22
+  },
+  "kompare-calls": {
+    "w": 109,
+    "h": 22
+  },
+  "greener-travel": {
+    "w": 101,
+    "h": 22
+  }
+}

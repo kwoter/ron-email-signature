@@ -1,0 +1,10 @@
+import pkg from '/Users/louisdean/Projects/chalk-motion-app-main/node_modules/playwright-core/index.js';
+const { chromium } = pkg;
+const browser = await chromium.launch();
+const page = await browser.newPage({ deviceScaleFactor: 2 });
+await page.goto('file:///Users/louisdean/Projects/ron-email-signature/preview.html', { waitUntil: 'networkidle' });
+await page.waitForTimeout(300);
+const el = await page.$('table');
+await el.screenshot({ path: '/Users/louisdean/Projects/ron-email-signature/assets/_preview.png' });
+await browser.close();
+console.log('shot');
